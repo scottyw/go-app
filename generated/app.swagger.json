@@ -1,0 +1,53 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "app.proto",
+    "version": "version not set"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/hello": {
+      "get": {
+        "operationId": "Hello",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/HelloResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "App"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "HelloResponse": {
+      "type": "object",
+      "properties": {
+        "reply": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
