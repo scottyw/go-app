@@ -1,7 +1,9 @@
 package cmd
 
 import (
-	"fmt"
+	"sync"
+
+	"github.com/scottyw/go-app/pkg/server"
 
 	"github.com/spf13/cobra"
 )
@@ -18,5 +20,14 @@ func init() {
 }
 
 func start(cmd *cobra.Command, args []string) {
-	fmt.Println("start called")
+
+	go server.StartGRPC()
+
+	go server.StartHTTP()
+
+	// Block forever
+	var wg sync.WaitGroup
+	wg.Add(1)
+	wg.Wait()
+
 }

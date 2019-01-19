@@ -28,7 +28,7 @@
         },
         "parameters": [
           {
-            "name": "message",
+            "name": "name",
             "in": "query",
             "required": false,
             "type": "string"
@@ -44,7 +44,7 @@
     "HelloResponse": {
       "type": "object",
       "properties": {
-        "reply": {
+        "message": {
           "type": "string"
         }
       }

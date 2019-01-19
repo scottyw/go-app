@@ -74,7 +74,7 @@ var _GeneratedAppSwaggerJson = []byte(`{
         },
         "parameters": [
           {
-            "name": "message",
+            "name": "name",
             "in": "query",
             "required": false,
             "type": "string"
@@ -90,7 +90,7 @@ var _GeneratedAppSwaggerJson = []byte(`{
     "HelloResponse": {
       "type": "object",
       "properties": {
-        "reply": {
+        "message": {
           "type": "string"
         }
       }
